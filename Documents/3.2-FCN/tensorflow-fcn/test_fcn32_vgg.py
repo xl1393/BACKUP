@@ -13,6 +13,7 @@ import utils
 from tensorflow.python.framework import ops
 
 img1 = scp.misc.imread("./test_data/tabby_cat.png")
+#img1 = scp.misc.imread("/home/xli/jp2_Temp/template.jpg")
 
 with tf.Session() as sess:
     images = tf.placeholder("float")

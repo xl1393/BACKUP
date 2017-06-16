@@ -18,7 +18,7 @@ logging.basicConfig(format='%(asctime)s %(levelname)s %(message)s',
 
 from tensorflow.python.framework import ops
 
-img1 = cv2.imread("/home/xli/jp2_Temp/30.jp2")
+img1 = scp.misc.imread("/home/xli/jp2_Temp/template.jpg")
 
 with tf.Session() as sess:
     images = tf.placeholder("float")
@@ -46,6 +46,6 @@ with tf.Session() as sess:
     down_color = utils.color_image(down[0])
     up_color = utils.color_image(up[0])
 
-    cv2.imwrite('30.jp2', up_color)
-    #scp.misc.imsave('fcn8_downsampled_lena.png', down_color)
-    #scp.misc.imsave('fcn8_upsampled_lena.png', up_color)
+    #cv2.imwrite('30.jp2', up_color)
+    scp.misc.imsave('fcn8_downsampled_lena.png', down_color)
+    scp.misc.imsave('fcn8_upsampled_lena.png', up_color)
